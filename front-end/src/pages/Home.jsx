@@ -1,6 +1,8 @@
 function Home() {
     return (
+
       <div className="container">
+        <hr></hr>
         <h1>Welcome to My Portfolio</h1>
         <p>This is the home page of my portfolio.</p>
       </div>

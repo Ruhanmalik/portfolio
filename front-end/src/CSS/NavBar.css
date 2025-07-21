@@ -1,0 +1,48 @@
+/* Modern Navbar Styles */
+
+.navbar {
+  background: #181a1b;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-home {
+  margin-right: auto;
+}
+
+.navbar-home a {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.navbar-home a:hover {
+  color: #ffffff;
+}
+
+.navbar-item a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #b0b0b0;
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-item a:hover {
+  background: #232526;
+  color: #ffffff;
+}
