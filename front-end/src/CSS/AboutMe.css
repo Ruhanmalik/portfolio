@@ -1,10 +1,47 @@
-.pfp {
-    width: 200px;
-    height: 200px;
+.aboutme-center {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+  background: none;
+}
 
-    object-fit: cover;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+.aboutme-card {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(34, 36, 40, 0.85);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.aboutme-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.aboutme-pfp {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 0 1.5rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.aboutme-text {
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 0;
 }

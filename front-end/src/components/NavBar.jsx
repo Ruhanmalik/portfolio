@@ -3,16 +3,16 @@ import './../CSS/NavBar.css'
 
 function NavBar() {
     return (
-        <nav className="navbar">
+        <nav className="navbar glass-navbar">
+            <div className="navbar-logo">
+                <Link to="/">RM</Link>
+            </div>
             <ul className="navbar-list">
-                <li className="navbar-home">
-                <Link to="/">Ruhan Malik</Link>
+                <li className="navbar-item">
+                    <Link to="/about">About Me</Link>
                 </li>
                 <li className="navbar-item">
-                <Link to="/about">About Me</Link>
-                </li>
-                <li className="navbar-item">
-                <Link to="/projects">Projects</Link>
+                    <Link to="/projects">Projects</Link>
                 </li>
                 <li className="navbar-item">
                     <Link to="/resume">Resume</Link>
@@ -20,7 +20,6 @@ function NavBar() {
                 <li className="navbar-item">
                     <Link to="/contact">Contact</Link>
                 </li>
-                
             </ul>
         </nav>
     )

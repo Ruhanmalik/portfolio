@@ -1,9 +1,33 @@
 /* Modern Navbar Styles */
 
-.navbar {
-  background: #181a1b;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+.glass-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(36, 38, 45, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  border-bottom: 1.5px solid rgba(64,255,170,0.08);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 3rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar-logo {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #40ffaa;
+  margin-right: 2.5rem;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.navbar-logo a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .navbar-list {
@@ -15,34 +39,19 @@
   padding: 0;
 }
 
-.navbar-home {
-  margin-right: auto;
-}
-
-.navbar-home a {
-  font-size: 2rem;
-  font-weight: 700;
+.navbar-item a {
+  font-size: 1.15rem;
+  font-weight: 600;
   color: #e0e0e0;
   text-decoration: none;
-  letter-spacing: 1px;
-  transition: color 0.2s;
-}
-
-.navbar-home a:hover {
-  color: #ffffff;
-}
-
-.navbar-item a {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #b0b0b0;
-  text-decoration: none;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
 }
 
 .navbar-item a:hover {
-  background: #232526;
-  color: #ffffff;
+  background: rgba(64,255,170,0.12);
+  color: #40ffaa;
+  box-shadow: 0 2px 8px rgba(64,255,170,0.08);
 }
