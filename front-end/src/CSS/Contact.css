@@ -12,7 +12,7 @@
   background: rgba(34, 36, 40, 0.85);
   border-radius: 32px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  padding: 3rem 2rem;
+  padding: 4rem 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,9 +22,9 @@
 .contact-title {
   text-align: center;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 3rem;
   letter-spacing: 1px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.2rem;
   color: #e0e0e0;
   text-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
@@ -32,7 +32,7 @@
 .contact-text {
   text-align: center;
   color: #b0b0b0;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -42,7 +42,7 @@
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.7rem;
   align-items: center;
 }
 
@@ -50,8 +50,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.7rem;
-  font-size: 1.08rem;
+  gap: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .contact-info-icon {
@@ -59,13 +59,15 @@
   align-items: center;
   justify-content: center;
   margin-right: 0.5rem;
-  min-width: 22px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .contact-info-label {
   color: #40ffaa;
   font-weight: 600;
   min-width: 70px;
+  font-size: 1.3rem;
 }
 
 .contact-info-link {
@@ -73,6 +75,7 @@
   text-decoration: none;
   transition: color 0.2s;
   word-break: break-all;
+  font-size: 1.3rem;
 }
 
 .contact-info-link:hover {
