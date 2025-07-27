@@ -15,7 +15,7 @@ function Home() {
           alignItems: 'center',
           margin: '2rem 0',
         }}>
-          <GradientText style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1.5rem' }}>Ruhan Malik</GradientText>
+          <GradientText style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>Ruhan Malik</GradientText>
           <h1 style={{
             textAlign: 'center',
             fontWeight: 700,
