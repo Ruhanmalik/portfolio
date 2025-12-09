@@ -29,15 +29,18 @@ function Projects() {
           <ScrollStackItem>
             <div className="project-content">
               <h2 className="project-title">EPUB to audiobook converter</h2>
-              <h3 className="project-technologies">Technologies: PyTorch • CUDA • ebooklib • FFmpeg • Kokoro TTS</h3>
-              <p className="project-description">Architected a high-performance EPUB to audiobook conversion system utilizing GPU acceleration with PyTorch and CUDA optimization,
-                 achieving 2400% performance improvement over CPU processing and processing 2.4M characters in 19 minutes on RTX 4070. Engineered comprehensive text processing
-                  pipeline using ebooklib for EPUB parsing, intelligent chunking algorithms for memory management, Kokoro TTS integration for natural speech synthesis, and FFmpeg
-                   multimedia framework for automated MP3 generation with batch processing capabilities, successfully converting full-length novels into professional audiobook format
-                    while demonstrating advanced GPU computing, AI integration, and multimedia processing expertise.
+              <h3 className="project-technologies">Technologies: Electron • FastAPI •PyTorch • CUDA • ebooklib • FFmpeg • Kokoro TTS</h3>
+              <p className="project-description">AI developed an EPUB to Audiobook Generator that transforms digital books into high-quality audiobooks
+                 using AI-powered text-to-speech technology. The application features a modern Electron-based desktop interface built with React,
+                  paired with a FastAPI backend that leverages Kokoro TTS and GPU acceleration for efficient processing. What sets this project
+                   apart is its performance optimization—I implemented intelligent text chunking and CUDA-accelerated processing that reduced
+                    conversion times from 4-6 hours down to just 25 minutes for typical novels. The application handles the complete workflow
+                     from EPUB upload and text extraction to real-time progress tracking and final MP3 generation, with features like text editing
+                      automatic cleanup, and cross-platform file management. This project demonstrates my ability to build full-stack applications
+                       that solve real-world problems while delivering exceptional user experience and performance.
                     </p>
             </div>
-            <img src="/epub.PNG" className="project-image" alt="EPUB to audiobook converter" />
+            <img src="/epubV2.png" className="project-image" alt="EPUB to audiobook converter" />
           </ScrollStackItem>
           <ScrollStackItem>
             <div className="project-content">

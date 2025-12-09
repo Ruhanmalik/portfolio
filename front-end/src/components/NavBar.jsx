@@ -20,6 +20,9 @@ function NavBar() {
                 <li className="navbar-item">
                     <Link to="/contact">Contact</Link>
                 </li>
+                <li className="navbar-item">
+                    <Link to="/interests">Interests</Link>
+                </li>
             </ul>
         </nav>
     )
