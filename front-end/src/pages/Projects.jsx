@@ -30,7 +30,7 @@ function Projects() {
             <div className="project-content">
               <h2 className="project-title">EPUB to audiobook converter</h2>
               <h3 className="project-technologies">Technologies: Electron • FastAPI •PyTorch • CUDA • ebooklib • FFmpeg • Kokoro TTS</h3>
-              <p className="project-description">AI developed an EPUB to Audiobook Generator that transforms digital books into high-quality audiobooks
+              <p className="project-description">I developed an EPUB to Audiobook Generator that transforms digital books into high-quality audiobooks
                  using AI-powered text-to-speech technology. The application features a modern Electron-based desktop interface built with React,
                   paired with a FastAPI backend that leverages Kokoro TTS and GPU acceleration for efficient processing. What sets this project
                    apart is its performance optimization—I implemented intelligent text chunking and CUDA-accelerated processing that reduced
