@@ -3,7 +3,7 @@ import "./../CSS/GradientText.css";
 export default function GradientText({
   children,
   className = "",
-  colors = ["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"],
+  colors = ["#00ffc8", "#00b4ff", "#00ffc8", "#00b4ff", "#00ffc8"],
   animationSpeed = 8,
   showBorder = false,
   style = {}
@@ -14,7 +14,7 @@ export default function GradientText({
   };
 
   return (
-    <div className={`animated-gradient-text ${className}`}> 
+    <div className={`animated-gradient-text ${className}`}>
       {showBorder && <div className="gradient-overlay" style={gradientStyle}></div>}
       <div className="text-content" style={{...gradientStyle, ...style}}>{children}</div>
     </div>

@@ -1,48 +1,267 @@
+/* About Me - Cyber Terminal Design */
+
 .aboutme-center {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   display: flex;
   background: none;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
 }
 
 .aboutme-card {
-  width: 90%;
-  max-width: 700px;
-  background: rgba(34, 36, 40, 0.85);
-  border-radius: 32px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 900px;
+  background: rgba(15, 15, 25, 0.8);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 255, 200, 0.2);
+  box-shadow:
+    0 0 60px rgba(0, 255, 200, 0.12),
+    0 8px 40px rgba(0, 0, 0, 0.5);
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(2rem, 5vw, 3.5rem);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 2.5rem;
   margin: 2rem 0;
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
 }
 
-.aboutme-title {
-  text-align: center;
+.aboutme-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(0, 255, 200, 0.5) 50%,
+    transparent
+  );
+  animation: header-scan 3s ease-in-out infinite;
+}
+
+@keyframes header-scan {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.9; }
+}
+
+/* Terminal header */
+.aboutme-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.terminal-symbol {
+  color: #00ffc8;
   font-weight: 700;
-  font-size: 2.2rem;
-  letter-spacing: 1px;
-  margin-bottom: 1.5rem;
-  color: #e0e0e0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  text-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
+}
+
+.header-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+/* Profile section */
+.profile-section {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  flex-shrink: 0;
 }
 
 .aboutme-pfp {
-  width: 240px;
-  height: 240px;
+  width: clamp(160px, 25vw, 220px);
+  height: clamp(160px, 25vw, 220px);
   object-fit: cover;
   object-position: center 30%;
-  border-radius: 50%;
-  margin: 0 0 1.5rem 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border-radius: 12px;
+  border: 2px solid rgba(0, 255, 200, 0.3);
+  box-shadow:
+    0 0 40px rgba(0, 255, 200, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.image-border {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1px solid rgba(0, 255, 200, 0.2);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.aboutme-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: #00ffc8;
+  text-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.aboutme-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.role-bracket {
+  color: #00b4ff;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.aboutme-location {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.location-icon {
+  filter: grayscale(1) brightness(1.2);
+}
+
+/* Bio section */
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bio-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #00ffc8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio-icon {
+  color: #00b4ff;
+  font-weight: 700;
 }
 
 .aboutme-text {
-  text-align: center;
-  color: #b0b0b0;
-  font-size: 1.15rem;
-  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: clamp(1.05rem, 2.2vw, 1.15rem);
+  line-height: 1.8;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+.aboutme-text:last-child {
   margin-bottom: 0;
+}
+
+/* Interests section */
+.interests-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.interest-badge {
+  background: rgba(0, 255, 200, 0.05);
+  border: 1px solid rgba(0, 255, 200, 0.25);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.interest-badge:hover {
+  background: rgba(0, 255, 200, 0.1);
+  border-color: rgba(0, 255, 200, 0.4);
+  box-shadow:
+    0 0 20px rgba(0, 255, 200, 0.2),
+    inset 0 0 10px rgba(0, 255, 200, 0.05);
+  transform: translateY(-2px);
+}
+
+.interest-icon {
+  font-size: 1.5rem;
+  filter: grayscale(0.3) brightness(1.1);
+}
+
+.interest-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Fade in animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info {
+    align-items: center;
+  }
+
+  .aboutme-role,
+  .aboutme-location {
+    justify-content: center;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
 }

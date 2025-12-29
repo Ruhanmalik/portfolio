@@ -12,29 +12,34 @@
     will-change: scroll-position;
     margin-top: -3.5rem;
   }
-  
+
   .scroll-stack-inner {
     padding: 20vh 5rem 50rem;
     min-height: 100vh;
   }
-  
+
   .scroll-stack-card-wrapper {
     position: relative;
   }
-  
+
+  /* Enhanced cyber-noir card design */
   .scroll-stack-card {
-    background: #222428;
+    background: linear-gradient(135deg, rgba(15, 15, 25, 0.95) 0%, rgba(20, 20, 30, 0.95) 100%);
     color: #fff;
     transform-origin: top center;
     will-change: transform, filter;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 0 60px rgba(0, 255, 200, 0.15),
+      0 8px 40px rgba(0, 0, 0, 0.6),
+      inset 0 0 40px rgba(0, 255, 200, 0.03);
     height: 30rem;
     width: 100%;
     margin: 30px 0;
     padding: 3rem;
-    border-radius: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 200, 0.2);
     box-sizing: border-box;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -43,8 +48,44 @@
     flex-direction: row;
     align-items: center;
     gap: 2.5rem;
+    overflow: hidden;
   }
-  
+
+  /* Subtle scan line effect */
+  .scroll-stack-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(0, 255, 200, 0.5) 50%,
+      transparent
+    );
+    animation: card-scan 3s ease-in-out infinite;
+  }
+
+  @keyframes card-scan {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  /* Corner accents */
+  .scroll-stack-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background:
+      linear-gradient(to left, rgba(0, 255, 200, 0.1) 0%, transparent 50%),
+      linear-gradient(to bottom, rgba(0, 255, 200, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
   .scroll-stack-end {
     width: 100%;
     height: 1px;
@@ -58,6 +99,7 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  z-index: 1;
 }
 
 .project-image {
@@ -67,55 +109,103 @@
   height: auto;
   max-height: 90%;
   display: block;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 200, 0.15);
+  box-shadow:
+    0 0 30px rgba(0, 255, 200, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.4);
   object-fit: contain;
   margin: 0;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.project-image:hover {
+  border-color: rgba(0, 255, 200, 0.4);
+  box-shadow:
+    0 0 50px rgba(0, 255, 200, 0.2),
+    0 12px 40px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
 }
 
 .project-title {
-  font-size: 2.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #00ffc8;
+  text-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.project-title::before {
+  content: '//';
+  color: #00b4ff;
+  margin-right: 0.5rem;
   font-weight: 700;
-  color: #e0e0e0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  margin-bottom: 1rem;
 }
 
 .coming-soon {
-  font-size: 4.0rem;
-  font-weight: 700;
-  color: #e0e0e0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #00ffc8;
+  text-shadow: 0 0 30px rgba(0, 255, 200, 0.5);
   margin-bottom: 1rem;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .project-description {
-  font-size: 1.15rem;
-  color: #b0b0b0;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .project-technologies {
-  font-size: 1rem;
-  color: #b0b0b0;
-  margin-bottom: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: rgba(0, 255, 200, 0.8);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.8rem 1rem;
+  background: rgba(0, 255, 200, 0.05);
+  border-left: 3px solid rgba(0, 255, 200, 0.5);
+  border-radius: 4px;
 }
 
 @media (max-width: 900px) {
+  .scroll-stack-inner {
+    padding: 15vh 1.5rem 50rem;
+  }
+
   .scroll-stack-card {
     flex-direction: column;
     gap: 1.5rem;
     height: auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
   }
+
   .project-content, .project-image {
     max-width: 100%;
     width: 100%;
   }
+
   .project-image {
     max-height: 220px;
     margin: 0 auto;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+  }
+
+  .coming-soon {
+    font-size: 2.5rem;
   }
 }
 
