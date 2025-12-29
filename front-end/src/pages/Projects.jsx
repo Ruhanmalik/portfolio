@@ -42,6 +42,15 @@ function Projects() {
             </div>
             <img src="/epubV2.png" className="project-image" alt="EPUB to audiobook converter" />
           </ScrollStackItem>
+            <div className="project-content">
+              <h2 className="project-title">Productivity Tracker</h2>
+              <h3 className="project-technologies">Technologies: Next.js • Supabase</h3>
+              <p className="project-description"> Worked on a productivity tracker 
+                    </p>
+            </div>
+          <ScrollStackItem>
+
+          </ScrollStackItem>
           <ScrollStackItem>
             <div className="project-content">
               <h2 className="coming-soon">More Coming Soon...</h2>
