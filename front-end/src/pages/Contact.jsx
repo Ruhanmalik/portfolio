@@ -4,6 +4,10 @@ function Contact() {
     return (
         <div className="container contact-center">
           <div className="contact-card">
+            <div className="contact-header">
+              <span className="terminal-symbol">&gt;</span>
+              <span>contact --info</span>
+            </div>
             <h1 className="contact-title">Get In Touch</h1>
             <div className="contact-info-list">
               <div className="contact-info-item">

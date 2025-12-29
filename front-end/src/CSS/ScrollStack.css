@@ -10,7 +10,7 @@
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     will-change: scroll-position;
-    margin-top: -3.5rem;
+    margin-top: -1rem;
   }
 
   .scroll-stack-inner {

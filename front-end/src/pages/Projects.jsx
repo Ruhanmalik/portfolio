@@ -29,27 +29,23 @@ function Projects() {
           <ScrollStackItem>
             <div className="project-content">
               <h2 className="project-title">EPUB to audiobook converter</h2>
-              <h3 className="project-technologies">Technologies: Electron • FastAPI •PyTorch • CUDA • ebooklib • FFmpeg • Kokoro TTS</h3>
-              <p className="project-description">I developed an EPUB to Audiobook Generator that transforms digital books into high-quality audiobooks
-                 using AI-powered text-to-speech technology. The application features a modern Electron-based desktop interface built with React,
-                  paired with a FastAPI backend that leverages Kokoro TTS and GPU acceleration for efficient processing. What sets this project
-                   apart is its performance optimization—I implemented intelligent text chunking and CUDA-accelerated processing that reduced
-                    conversion times from 4-6 hours down to just 25 minutes for typical novels. The application handles the complete workflow
-                     from EPUB upload and text extraction to real-time progress tracking and final MP3 generation, with features like text editing
-                      automatic cleanup, and cross-platform file management. This project demonstrates my ability to build full-stack applications
-                       that solve real-world problems while delivering exceptional user experience and performance.
-                    </p>
+              <h3 className="project-technologies">Technologies: Electron • FastAPI • PyTorch • CUDA • ebooklib • FFmpeg • Kokoro TTS</h3>
+              <p className="project-description">I built an EPUB to Audiobook Generator that converts digital books into high quality
+                 audiobooks using AI-powered text-to-speech. The app features a modern Electron desktop interface built with React and
+                  a FastAPI backend using Kokoro TTS with GPU acceleration. I focused heavily on performance, implementing intelligent
+                   text chunking and CUDA-based processing to reduce conversion time for large novels from ~6 hours to just 25 minutes.
+                    The system handles the full workflow—EPUB upload, text extraction, editing, real-time progress tracking, and final 
+                    MP3 generation—with seamless cross-platform file support.
+              </p>
             </div>
             <img src="/epubV2.png" className="project-image" alt="EPUB to audiobook converter" />
           </ScrollStackItem>
+          <ScrollStackItem>
             <div className="project-content">
               <h2 className="project-title">Productivity Tracker</h2>
               <h3 className="project-technologies">Technologies: Next.js • Supabase</h3>
-              <p className="project-description"> Worked on a productivity tracker 
-                    </p>
+              <p className="project-description">Worked on a productivity tracker - more details coming soon.</p>
             </div>
-          <ScrollStackItem>
-
           </ScrollStackItem>
           <ScrollStackItem>
             <div className="project-content">

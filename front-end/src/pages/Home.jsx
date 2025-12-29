@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import GradientText from "../components/GradientText";
 import './../CSS/Home.css';
 
 function Home() {
     const heroRef = useRef(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
       const hero = heroRef.current;
@@ -65,7 +67,7 @@ function Home() {
           <div className="cta-buttons reveal">
             <button
               className="btn-primary"
-              onClick={() => window.location.href = '/projects'}
+              onClick={() => navigate('/projects')}
             >
               <span className="btn-text">View Projects</span>
               <span className="btn-arrow">→</span>
@@ -73,7 +75,7 @@ function Home() {
 
             <button
               className="btn-secondary"
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => navigate('/contact')}
             >
               <span className="btn-text">Contact Me</span>
             </button>

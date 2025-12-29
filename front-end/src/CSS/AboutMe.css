@@ -3,10 +3,11 @@
 .aboutme-center {
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 70px);
   display: flex;
   background: none;
   padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .aboutme-card {
@@ -25,7 +26,7 @@
   margin: 2rem 0;
   backdrop-filter: blur(20px);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .aboutme-card::before {

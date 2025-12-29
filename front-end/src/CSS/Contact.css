@@ -1,32 +1,59 @@
 .contact-center {
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 70px);
   display: flex;
   background: none;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
 }
 
 .contact-card {
-  width: 90%;
+  width: 100%;
   max-width: 700px;
-  background: rgba(34, 36, 40, 0.85);
-  border-radius: 32px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  padding: 4rem 2.5rem;
+  background: rgba(15, 15, 25, 0.8);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 255, 200, 0.2);
+  box-shadow:
+    0 0 60px rgba(0, 255, 200, 0.12),
+    0 8px 40px rgba(0, 0, 0, 0.5);
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(2rem, 5vw, 3.5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem 0;
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: visible;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(0, 255, 200, 0.5) 50%,
+    transparent
+  );
+  animation: contact-scan 3s ease-in-out infinite;
+}
+
+@keyframes contact-scan {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.9; }
 }
 
 .contact-title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 3rem;
-  letter-spacing: 1px;
-  margin-bottom: 2.2rem;
-  color: #e0e0e0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: #00ffc8;
+  text-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.5px;
 }
 
 .contact-text {
@@ -79,6 +106,24 @@
 }
 
 .contact-info-link:hover {
-  color: #40ffaa;
+  color: #00ffc8;
   text-decoration: underline;
+}
+
+/* Terminal header style */
+.contact-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+.terminal-symbol {
+  color: #00ffc8;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
 }
