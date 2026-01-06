@@ -55,7 +55,7 @@ function Home() {
 
           {/* Tech stack */}
           <div className="tech-stack reveal">
-            {['React', 'Python', 'AI/ML', 'Flask', 'PyTorch', 'Full-Stack'].map((skill, index) => (
+            {['React', 'Python', 'AI/ML', 'FastAPI', 'Next.js', 'Full-Stack'].map((skill, index) => (
               <span key={skill} className="tech-badge" style={{ animationDelay: `${index * 0.1}s` }}>
                 <span className="tech-icon">&gt;_</span>
                 {skill}
