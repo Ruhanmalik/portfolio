@@ -44,8 +44,12 @@ function Projects() {
             <div className="project-content">
               <h2 className="project-title">Productivity Tracker</h2>
               <h3 className="project-technologies">Technologies: Next.js • Supabase</h3>
-              <p className="project-description">Worked on a productivity tracker - more details coming soon.</p>
+              <p className="project-description">A full-stack productivity web app for managing personal events and tasks with a sleek dark
+                 themed calendar interface. Built with Next.js and React on the frontend and Supabase handling authentication and real-time
+                  data persistence. Supports a complete event lifecycle including creation, editing, deletion, and multiple calendar views 
+                  alongside a full auth flow with email/password login, signup, and password reset.</p>
             </div>
+            <img src="calendar.png" className="project-image" alt="Productivity Tracker" />
           </ScrollStackItem>
           <ScrollStackItem>
             <div className="project-content">
