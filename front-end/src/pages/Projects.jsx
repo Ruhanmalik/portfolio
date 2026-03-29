@@ -6,7 +6,7 @@ function Projects() {
   return (
     <div className="container">
       <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '1.5rem 0 0.2rem 0' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '1.5rem 0 0 0' }}>
             <span className="scroll-hint-text">
               Scroll down to see more projects ↓
             </span>
