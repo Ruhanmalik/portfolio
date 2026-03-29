@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "workspaces": [
+    "front-end"
+  ],
+  "scripts": {
+    "build": "npm run build -w front-end",
+    "dev": "npm run dev -w front-end"
+  }
+}
