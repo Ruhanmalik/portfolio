@@ -223,9 +223,6 @@ function App() {
                 excited to tackle new challenges and explore how emerging technologies can solve
                 problems in creative ways.
               </p>
-              <a href="mailto:aruhanmalik@gmail.com" className="btn-blue" style={{ display: 'inline-block', textDecoration: 'none', marginTop: '0.5rem' }}>
-                Hire Me
-              </a>
             </div>
           </div>
         </div>
